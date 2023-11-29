@@ -1,0 +1,84 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                    Telegram To MT5 Copier                                                     |
+//|                                 Developed by Forex Robot Easy Team, forexroboteasy.com                                |
+//+------------------------------------------------------------------+
+
+// Define necessary input parameters
+input string TelegramBotToken = ''; // Bot token obtained from Telegram
+input int TelegramUserID = 0; // User ID for connection with Telegram
+input string TelegramGroup = ''; // Group for connection with Telegram
+
+//+------------------------------------------------------------------+
+//|                                        Initialization Function for Telegram Connection                                      |
+//+------------------------------------------------------------------+
+void OnInit()
+{
+    // Connect to Telegram
+    ConnectToTelegram(TelegramBotToken);
+}
+
+//+------------------------------------------------------------------+
+//|                                          Connection Function with Telegram                                                   |
+//+------------------------------------------------------------------+
+void ConnectToTelegram(string token)
+{
+    // Connect to Telegram API
+    // Code to connect to Telegram API goes here
+}
+
+//+------------------------------------------------------------------+
+//|                                            Function to Send Order Notifications                                             |
+//+------------------------------------------------------------------+
+void SendOrderNotification(string message)
+{
+    // Send order notification to Telegram
+    // Code to send order notification goes here
+}
+
+//+------------------------------------------------------------------+
+//|                                                    Trading Functions                                                         |
+//+------------------------------------------------------------------+
+void OpenBuyOrder(double volume, double price, double sl, double tp)
+{
+    // Code to open a buy order goes here
+    SendOrderNotification('Buy order opened');
+}
+
+void OpenSellOrder(double volume, double price, double sl, double tp)
+{
+    // Code to open a sell order goes here
+    SendOrderNotification('Sell order opened');
+}
+
+void CloseOrder(int ticket)
+{
+    // Code to close an order goes here
+    SendOrderNotification('Order closed');
+}
+
+//+------------------------------------------------------------------+
+//|                                               Order Update Function                                                       |
+//+------------------------------------------------------------------+
+void OnOrderUpdate(int ticket)
+{
+    // Code to handle order updates goes here
+    SendOrderNotification('Order updated');
+}
+
+//+------------------------------------------------------------------+
+//|                                                 Main Program Loop                                                           |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Code for main program loop goes here
+}
+
+//+------------------------------------------------------------------+
+//|                                                Program Conclusion                                                           |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Code for program conclusion goes here
+}
+
